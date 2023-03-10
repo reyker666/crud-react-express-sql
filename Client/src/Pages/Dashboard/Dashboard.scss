@@ -1,0 +1,45 @@
+.dashboard {
+    display: grid;
+    grid-template: "a a a" 8vh
+                   "b b b" 100vh / 1fr 1fr 1fr;
+
+    .navbar {
+        grid-area: a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2em;
+
+        .navbar-menu {
+            display: flex;
+            gap: 1em;
+
+            .menu-item {
+                color: $color-primary;
+
+                &:link, &:visited, &:active {
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    color: $color-red;
+                }
+            }
+        }
+
+        .navbar-img {
+            height: 3em;
+            width: 3em;
+            background-color: $color-primary;
+            border-radius: 50%;
+        }
+    }
+
+    .content {
+        grid-area: b;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
